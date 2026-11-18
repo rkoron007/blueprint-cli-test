@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: blueprint-cli-test
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: "true"
+    startCommand: python app.py
+    healthCheckPath: /
+    envVars:
+      - key: GREETING
+        value: hi from render.yaml
