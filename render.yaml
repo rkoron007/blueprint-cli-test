@@ -12,3 +12,5 @@ services:
         value: hi from a planned sync
       - key: APP_VERSION
         value: "2"
+      - key: SECRET_TOKEN
+        sync: false
