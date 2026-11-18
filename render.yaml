@@ -14,3 +14,16 @@ services:
         value: "2"
       - key: SECRET_TOKEN
         sync: false
+  - type: web
+    name: blueprint-cli-test-secret
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: "true"
+    startCommand: python app.py
+    healthCheckPath: /
+    envVars:
+      - key: GREETING
+        value: hi from the second service
+      - key: SECRET_TOKEN
+        sync: false
