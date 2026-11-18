@@ -9,4 +9,6 @@ services:
     healthCheckPath: /
     envVars:
       - key: GREETING
-        value: hi from render.yaml
+        value: hi from a planned sync
+      - key: APP_VERSION
+        value: "2"
